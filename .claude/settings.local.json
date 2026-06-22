@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/maia.golan/maventests/.claude)",
+      "mcp__Claude_in_Chrome__navigate"
+    ]
+  }
+}
