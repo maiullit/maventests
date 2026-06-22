@@ -466,23 +466,22 @@ export default function MeridianPage() {
         <div>
           <div style={{ fontSize: 11, letterSpacing: "0.04em", textTransform: "uppercase", color: "var(--text-tertiary)", marginBottom: 6 }}>{cursorIsNow}</div>
           <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
-            <SparklesText
-              text={cursorTimeLabel}
-              sparklesCount={8}
-              colors={isDark
-                ? { first: "rgb(192,203,210)", second: "rgb(104,227,83)" }
-                : { first: "rgb(20,58,80)", second: "rgb(82,203,61)" }
-              }
-              style={{ fontFamily: "var(--font-display)", fontWeight: "var(--font-bold)", fontSize: 44, lineHeight: 1, letterSpacing: "-0.02em" }}
-            />
+            <span style={{ fontFamily: "var(--font-display)", fontWeight: "var(--font-bold)", fontSize: 44, lineHeight: 1, letterSpacing: "-0.02em" }}>{cursorTimeLabel}</span>
             <div style={{ fontSize: "var(--text-base)", color: "var(--text-secondary)", fontWeight: "var(--font-medium)" }}>{cursorDateLabel}</div>
           </div>
           <div style={{ fontSize: "var(--text-sm)", color: "var(--text-tertiary)", marginTop: 6 }}>in {home?.name} · drag the timeline to convert any moment across every zone</div>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 10, marginLeft: "auto" }}>
-          <button onClick={() => { setAtNow(true); setCursorFrac(null); }} style={{ display: "inline-flex", alignItems: "center", gap: 7, height: 40, padding: "0 16px", border: "1px solid var(--border-heavy)", background: "var(--surface-primary)", borderRadius: "var(--radius-lg)", cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: "var(--text-sm)", fontWeight: "var(--font-semibold)", color: "var(--text-primary)" }}>
-            Jump to now
-          </button>
+          <SparklesText
+            text="Jump to now"
+            sparklesCount={8}
+            colors={isDark
+              ? { first: "rgb(192,203,210)", second: "rgb(104,227,83)" }
+              : { first: "rgb(20,58,80)", second: "rgb(82,203,61)" }
+            }
+            style={{ display: "inline-flex", alignItems: "center", gap: 7, height: 40, padding: "0 16px", border: "1px solid var(--border-heavy)", background: "var(--surface-primary)", borderRadius: "var(--radius-lg)", cursor: "pointer", fontFamily: "var(--font-sans)", fontSize: "var(--text-sm)", fontWeight: "var(--font-semibold)", color: "var(--text-primary)" }}
+            onClick={() => { setAtNow(true); setCursorFrac(null); }}
+          />
         </div>
       </div>
 

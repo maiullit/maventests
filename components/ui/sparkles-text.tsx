@@ -78,6 +78,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
         {
           "--sparkles-first-color": `${colors.first}`,
           "--sparkles-second-color": `${colors.second}`,
+          ...(props as { style?: CSSProperties }).style,
         } as CSSProperties
       }
     >
