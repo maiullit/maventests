@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "engines": {
-    "node": "24.x"
+    "node": "20.x"
   },
   "dependencies": {
     "framer-motion": "^11.3.0",
